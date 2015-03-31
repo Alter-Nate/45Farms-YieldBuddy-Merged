@@ -1,0 +1,14 @@
+server {
+        listen 80 default;
+ 
+        root   /var/www/default/public;
+        index index.php;
+ 
+        location ~ \.php$ {
+                include /usr/local/nginx/conf/fastcgi_params;
+                fastcgi_index index.php;
+                if (-f $request_filename) {
+                    fastcgi_pass 127.0.0.1:9000;
+                }
+        }
+}
