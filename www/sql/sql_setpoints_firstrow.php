@@ -176,7 +176,7 @@ while ($row = $results->fetchArray()) {
 }
 
 //Light
-$results = $db->query('SELECT *	FROM CO2');
+$results = $db->query('SELECT *	FROM LIGHT');
 
 $column_to_session_value = array(
     "0" => "LightValue_Low",
@@ -196,6 +196,29 @@ while ($row = $results->fetchArray()) {
 	$i=$i+1;
 	}
 }
+
+//Water
+$results = $db->query('SELECT *	FROM WATER');
+
+$column_to_session_value = array(
+    "0" => "WaterValue_Low",
+    "1" => "WaterValue_High",
+);
+
+while ($row = $results->fetchArray()) {
+//	var_dump($row);
+	
+	$i=0;
+	while($i < 2){
+//	echo "<p></p>";
+//	echo $column_to_session_value[$i];
+//	echo ": ";
+//	echo $row[$i];
+	$_SESSION[$column_to_session_value[$i]] = $row[$i];
+	$i=$i+1;
+	}
+}
+
 
 $db->close();
 
