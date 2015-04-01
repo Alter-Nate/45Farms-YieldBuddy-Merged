@@ -213,7 +213,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  }
 	  echo "</tr>";
 	  
-	//Relay 7
+	//Relay 6
 	  try
 	  {
 	  echo "<tr>";

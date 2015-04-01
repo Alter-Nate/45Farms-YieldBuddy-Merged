@@ -430,29 +430,6 @@ a:active {
                 </form>
               </tr>
             </table>
-            <br />
-            Water
-            <table width="600" border="0">
-              <tr>
-                <form action="command.php" method="get">
-                  <?php
-		session_start();
-		$WaterValue_Low=$_SESSION['WaterValue_Low'];
-		$WaterValue_High=$_SESSION['WaterValue_High'];
-        echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
-		echo "<input type=\"text\" name=\"WaterValue_Low\" size=\"6\" value=\"" . $WaterValue_Low . "\" /></div>";
-		echo "</td>";
-		echo "<td><div align=\"right\">High: &nbsp;&nbsp;&nbsp;";
-		echo "<input type=\"text\" name=\"WaterValue_High\" size=\"6\" value=\"" . $WaterValue_High . "\" /></div></td>";
-		echo "</tr>";
-		
-		echo "<tr><td></td>";				
-		echo "<td><div align=\"right\"><input type=\"submit\"  name=\"submit\" value=\"Save Water Settings\" /></div></td>";
-		echo "</tr>";
-		?>
-                </form>
-              </tr>
-            </table>
         </td>
         </tr>
       </table>
